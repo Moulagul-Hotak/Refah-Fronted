@@ -6,8 +6,8 @@ const API_URL = "http://localhost:8000/api/users";
 
 function App() {
 
-  const [users,setUsers] = useState([]);
-  
+  const [users, setUsers] = useState([]);
+
   const fetchUsers = async () => {
     const response = await fetch(`${API_URL}`);
     const data = await response.json();
@@ -17,13 +17,16 @@ function App() {
   useEffect(() => {
     fetchUsers()
   }, [])
-  return (
+  return <>
+    {/* <Routes>
+      <Route path="/" element={<App />} />
+    </Routes> */}
     <div className="Users">
       <div className="container pt-5">
-        <Users allUsers={users}/>
+        <Users allUsers={users} />
       </div>
     </div>
-  );
+  </>
 }
 
 export default App;
