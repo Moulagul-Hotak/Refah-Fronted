@@ -1,8 +1,25 @@
 import React from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
+const API_URL = "http://localhost:8000/api/users/";
 function SingleUser(singleUser) {
+
+    const deleteUser = (userId) => {
+        axios.delete(
+            `${API_URL+userId}`)
+            .then((response) => {
+                document.getElementById(userId).remove();
+            }).catch((error) => {
+                console.log(error);
+                if (error.response.data.code === 400) {
+                    console.log(error.response.data.error);
+                }
+            });
+    }
+
     return <>
-        <tr>
+        <tr id={singleUser.user.id}>
             <td>{singleUser.user.id}</td>
             <td>{singleUser.user.name}</td>
             <td>{singleUser.user.email}</td>
@@ -16,7 +33,7 @@ function SingleUser(singleUser) {
             </td>
             <td>
             <button className="btn btn-outline-primary mr-2">Edit</button>
-            <button className="btn btn-outline-danger">Delete</button>
+            <button className="btn btn-outline-danger" onClick={() => deleteUser(singleUser.user.id)}>Delete</button>
             </td>
         </tr>
     </>
