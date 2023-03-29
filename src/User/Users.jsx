@@ -14,7 +14,7 @@ function Users(allUsers) {
             <div className="card-body">
                 {
                     allUsers.allUsers.length > 0 ?
-                        <table className="table table-head-fixed table-responsive-lg table-hover text-nowrap">
+                        <table className="table table-head-fixed table-responsive-lg table-hover text-nowrap text-center">
                             <thead>
                                 <tr>
                                     <th>ID</th>
