@@ -1,6 +1,5 @@
 import React from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 
 const API_URL = "http://localhost:8000/api/users/";
 function SingleUser(singleUser) {
