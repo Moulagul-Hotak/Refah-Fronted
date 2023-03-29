@@ -18,13 +18,8 @@ function App() {
     fetchUsers()
   }, [])
   return <>
-    {/* <Routes>
-      <Route path="/" element={<App />} />
-    </Routes> */}
     <div className="Users">
-      <div className="container pt-5">
-        <Users allUsers={users} />
-      </div>
+      <Users allUsers={users} />
     </div>
   </>
 }
