@@ -80,7 +80,7 @@ function CreateNewUser() {
                         <h3>
                             Edit User
                         </h3>
-                        <button className="btn btn-outline-primary">Back</button>
+                        <button className="btn btn-outline-primary" onClick={() => navigate(-1)}>Back</button>
                     </div>
                     <div className="card-body">
                         <form id="editUserForm" onSubmit={formik.handleSubmit}>
@@ -127,7 +127,7 @@ function CreateNewUser() {
                 </div>
             </div>
             <div className="col-lg-6">
-                <img src={user?.image_path} alt={user?.name} width="300px" height="300px" />
+                <img src={user?.image_path} alt={user?.name} width="300px" height="300px" style={{borderRadius: "50%"}}/>
             </div>
         </div>
     </>

@@ -27,7 +27,7 @@ function SingleUser(singleUser) {
                 <a href={singleUser.user.image_path} download={singleUser.user.name} target="blank">
                     <img src={singleUser.user.image_path}
                         alt={singleUser.user.name}
-                        style={{ maxWidth: "100px", maxHeight: "50px", marginTop: "-10px" }}
+                        style={{ maxWidth: "100px", maxHeight: "50px", marginTop: "-10px", borderRadius: "25px"}}
                     />
                 </a>
             </td>

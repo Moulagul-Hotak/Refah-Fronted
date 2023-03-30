@@ -83,7 +83,7 @@ function CreateNewUser() {
                     <h3>
                         Create New User
                     </h3>
-                    <button className="btn btn-outline-primary">Back</button>
+                    <button className="btn btn-outline-primary" onClick={() => navigate(-1)}>Back</button>
                 </div>
                 <div className="card-body">
                     <form id="newUserForm" onSubmit={formik.handleSubmit}>
