@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const API_URL = "http://localhost:8000/api/users/";
 function SingleUser(singleUser) {
@@ -31,7 +32,7 @@ function SingleUser(singleUser) {
                 </a>
             </td>
             <td>
-            <button className="btn btn-outline-primary mr-2">Edit</button>
+            <Link to={`/editUser/${singleUser.user.id}`} className="btn btn-outline-primary mr-2">Edit</Link>
             <button className="btn btn-outline-danger" onClick={() => deleteUser(singleUser.user.id)}>Delete</button>
             </td>
         </tr>
